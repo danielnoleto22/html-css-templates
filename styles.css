@@ -1,0 +1,241 @@
+@font-face{
+    font-family: h_p_container_a;
+    src: url(./fonts/netflix-sans-font/NetflixSans-Regular.otf) format(truetype);
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face{
+    font-family: h_p_container_a;
+    src: url(./fonts/netflix-sans-font/NetflixSans-Bold.otf) format(truetype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: h_p_container_a;
+    src: url(./fonts/netflix-sans-font/NetflixSans-Medium.otf) format(truetype);
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: h_p_container_a;
+    src: url(./fonts/netflix-sans-font/NetflixSans-Light.otf) format(truetype);
+    /* font-weight: lighter; */
+    font-style: normal;
+}
+
+body{
+    /* background-color: rgba(0, 0, 0, 0.952); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    z-index: 1;
+ }
+
+ #box_a{
+    width: 1920px;
+    height: 1000px;
+    border: black solid 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 200px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.9) 0%,
+        rgba(0,0,0,0.7) 40%,
+        rgba(0,0,0,0.7) 60%,
+        rgba(0,0,0,0.9) 100%
+    ),
+    url(./images/background_container_1+header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+ }
+
+ #header{
+    width: 65%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ #header > img{
+    width: 180px;
+    height: auto;
+ }
+
+ #header > div > select{
+    width: 150px;
+    height: 30px;
+    padding-left: 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: none;
+    margin-right: 8px;
+    background: none;
+    color: white;
+    border: rgb(163, 161, 161) solid 1px;
+    border-radius: 3px;
+    background-image: url(./images/icons/language-outline-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: left 7px center;
+}
+
+ #header > div > select:active option{
+    color: black;
+ }
+
+ #header > div > button{
+    width: 70px;
+    height: 32px;
+    background-color: rgb(223, 5, 5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 38px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+ }
+
+ #header > div > button:hover{
+    background-color: rgb(192, 17, 17);
+ }
+
+#container_a{
+    width: 700px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: auto;
+    gap: 28px;
+    margin-top: 40px;
+    padding: 0;
+}
+
+#container_a h1{
+    font-size: 64px;
+    height: auto;
+    font-family: h_p_container_a;
+    font-weight: 1000000;
+    letter-spacing: -1px;
+    font-weight: bolder;
+}
+
+#container_a h4{
+    font-size: 20px;
+    font-family: h_p_container_a;
+    font-weight: medium; 
+
+}
+
+#container_a h5{
+    font-family: h_p_container_a;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.container_a-text{
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+#container_a div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    height: fit-content;
+}
+
+#container_a form{
+    height: fit-content;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+#container_a form input{
+    position: relative;
+    left: 20px;
+    width: 600px;
+    height: 45px;
+    background-color: rgba(10, 10, 10, 0.7);
+    border-radius: 5px;
+    border: 1px rgb(78, 78, 78) solid;
+    font-size: 16px;
+    padding-left: 22px;
+    padding-top: 10px;
+    color: white;
+}
+
+#container_a form input::placeholder{
+    color: transparent;
+}
+
+input:-webkit-autofill{
+    background-color: #f0f0f0 !important;
+    color: white !important;
+    transition: background-color 5000s ease-in-out;
+}
+
+#container_a form label{
+    height: 50%;
+    position: relative;
+    left: -425px;
+    top: 18px;
+    color: rgb(218, 212, 196);
+    font-family: hp_container_a;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    padding: 0 5px;
+}
+
+#container_a form input:focus + label, #container_a input:not(:placeholder-shown) + label{
+    top: 3px;
+    transform: scale(0.85);
+    position: relative;
+    left: -430px;
+}
+
+#container_a form input:focus::placeholder{
+    font-size: 10px;
+    color: red;
+}
+
+#container_a form button{
+    position: relative;
+    right: 22px;
+    width: 250px;
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#container_a form button a{
+    text-decoration: none;
+    color: white;
+}
+
