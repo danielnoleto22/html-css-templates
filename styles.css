@@ -30,18 +30,42 @@
 body{
     /* background-color: rgba(0, 0, 0, 0.952); */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;
     width: 100vw;
     z-index: 1;
+    background-color: black;
  }
+
+/*----------------------------------------------------------------------*/
+
+/* #left_red_light{
+    position: relative;
+    width: 100px;
+    height: 1000px;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(230, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    background-color: white;
+
+}
+
+#right_red_light{
+    position: relative;
+    width: 100px;
+    height: 1000px;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(230, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    background-color: white;
+
+} */
 
  #box_a{
     width: 1920px;
     height: 1000px;
-    border: black solid 2px;
+    /* border: white solid 2px; */
+    border-right: 5px rgb(100, 13, 13) solid;
+    border-left: 5px rgb(100, 13, 13) solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,6 +84,13 @@ body{
     background-position: center;
     position: relative;
     z-index: 0;
+    /* border-bottom-left-radius: 100% 100px;
+    border-bottom-right-radius: 100% 100px; */
+ }
+
+ #box_a::after{
+    border-top-left-radius: 100% 40px;
+    border-top-right-radius: 100% 40px;
  }
 
  #header{
@@ -238,4 +269,38 @@ input:-webkit-autofill{
     text-decoration: none;
     color: white;
 }
+
+/*----------------------------------------------------------------------*/
+
+/* #separator_a_b{
+    box-sizing: border-box;
+    height: 100%;
+    width: 1920px;
+    height: 100px;
+    background-color: red;
+    border-top-left-radius: 50% 100% ;
+    border-top-right-radius: 50% 100%;
+    border-bottom: none;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    background-clip: padding-box;
+} */
+
+#box_b{
+    position: relative;
+    bottom: 45px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 1920px;
+    height: 100px;
+    background-color: black;
+    border-top-left-radius: 90% 90px;
+    border-top-right-radius: 90% 90px;
+    border-top: 5px rgb(100, 13, 13) solid;
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+    background-color: black;
+    background-clip: padding-box;
+    /* border-top: none; */
+}
+
+
 
